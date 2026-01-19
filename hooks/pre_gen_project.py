@@ -10,10 +10,10 @@ SUCCESS = "\x1b[1;32m [SUCCESS]: "
 # It updates the cookiecutter context to trim leading and trailing spaces
 
 slug = "{{ cookiecutter.slug }}"
-slug_regex = re.compile(r"^[A-Z][a-zA-Z0-9]*$")
+slug_regex = re.compile(r"^[a-z0-9-]+$")
 
 if slug_regex.match(slug) is None:
     assert False, (
         f"'{slug}' is not a valid project slug. "
-        "It must be PascalCase."
+        "It must contain only lowercase letters, numbers or hyphens (-)."
     )
