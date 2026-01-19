@@ -15,6 +15,9 @@
   ],
   "has_plugins_config": "n",
   "_copy_without_render": [
-    "**/*.html"
+    "**/*.html",
+    "uv.lock",
+    "**/*.png",
+    "**/*.ico"
   ]
 }
