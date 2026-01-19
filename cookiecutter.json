@@ -15,6 +15,6 @@
   ],
   "has_plugins_config": "n",
   "_copy_without_render": [
-    "{{ cookiecutter.slug }}/apps/**/*.html"
+    "apps/**/*.html"
   ]
 }
