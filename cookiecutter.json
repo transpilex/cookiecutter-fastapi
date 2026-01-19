@@ -1,6 +1,6 @@
 {
   "name": "My Awesome Project",
-  "slug": "{{ cookiecutter.name.title()|replace('-', '')|trim() }}",
+  "slug": "{{ cookiecutter.name.lower()|replace(' ', '-')|replace('.', '-')|trim() }}",
   "description": "",
   "version": "1.0.0",
   "ui_library": [
