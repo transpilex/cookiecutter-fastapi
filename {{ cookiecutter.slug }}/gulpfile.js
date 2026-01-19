@@ -81,7 +81,7 @@ const plugins = function () {
         if (img) {
             src(img)
                 .on('error', handleError('img'))
-                .pipe(dest(`${out}${name}/img/`));
+                .pipe(dest(`${out}${name}/images/`));
         }
 
         if (media) {
