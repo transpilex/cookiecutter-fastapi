@@ -3,10 +3,10 @@ import shutil
 from pathlib import Path
 
 TERMINATOR = "\x1b[0m"
-WARNING = "\x1b[1;33m [WARNING]: "
-INFO = "\x1b[1;33m [INFO]: "
+WARNING = "\033[38;5;178m"
+INFO = "\033[38;5;39m "
 HINT = "\x1b[3;33m"
-SUCCESS = "\x1b[1;32m [SUCCESS]: "
+SUCCESS = "\033[38;5;35m"
 
 
 def configure_layout_files(ui_library):
