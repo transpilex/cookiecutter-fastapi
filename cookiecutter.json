@@ -17,7 +17,10 @@
   "_copy_without_render": [
     "**/*.html",
     "uv.lock",
-    "**/*.png",
-    "**/*.ico"
+    ".git/*",
+    "**/.git/**",
+    "**/.venv/**",
+    "**/*.pyc",
+    "__pycache__"
   ]
 }
