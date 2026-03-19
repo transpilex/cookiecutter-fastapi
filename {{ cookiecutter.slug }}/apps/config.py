@@ -14,6 +14,23 @@ class AppSettings(BaseSettings):
     TEMPLATES_DIR: str = "apps/templates"
 
 
+class SecuritySettings(BaseSettings):
+    # Environment: "development" | "production"
+    ENVIRONMENT: str = "development"
+
+    # Trusted hosts — comma-separated, e.g. "example.com,www.example.com"
+    ALLOWED_HOSTS: List[str] = ["localhost", "127.0.0.1"]
+
+    # CORS origins — comma-separated, e.g. "https://example.com"
+    CORS_ORIGINS: List[str] = ["http://localhost", "http://127.0.0.1"]
+    CORS_ALLOW_CREDENTIALS: bool = True
+    CORS_ALLOW_METHODS: List[str] = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
+    CORS_ALLOW_HEADERS: List[str] = ["*"]
+
+    # Set True in production to redirect HTTP → HTTPS
+    HTTPS_REDIRECT: bool = False
+
+
 class DatabaseSettings(BaseSettings):
     pass
 
