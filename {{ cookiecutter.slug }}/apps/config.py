@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from typing import List
 from pydantic import computed_field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -79,6 +80,7 @@ class PostgresSettings(DatabaseSettings):
 
 class Settings(
     AppSettings,
+    SecuritySettings,
     SQLiteSettings,
     MySQLSettings,
     PostgresSettings
